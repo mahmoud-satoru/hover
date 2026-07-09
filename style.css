@@ -13,6 +13,7 @@
     background-image: url("imgs/78.jpg");
     background-size: cover;
     background-position: center;
+    perspective: 600px;
 }
 
 .title{
@@ -106,7 +107,7 @@
 }
 
 
-.card_1{
+.front{
     width: 300px;
     height: 400px;
     position: absolute;
@@ -117,7 +118,7 @@
 }
 
 
-.card_2{
+.back{
     width: 300px;
     height: 400px;
     position: absolute;
@@ -133,7 +134,7 @@
     transform: rotatey(180deg);
 }
 
-.hoop{
+.text_contaner{
     background-color: #697888;
     width: 0px;
     height: 0px;
@@ -141,12 +142,12 @@
     overflow: hidden;
 }
 
-.hoop .ptxt{
+.text_contaner .ptxt{
     margin-bottom: 20px;
 }
 
 
-.card:hover .hoop{
+.card:hover .text_contaner{
     width: 300px;
     height: 400px;
     transition-duration: 2s;
@@ -197,41 +198,53 @@
     margin-bottom: 20px;
     margin-top: 40px;
 }
-.skills p{
+
+
+.card .s1,
+.card .s2,
+.card .s3,
+.card .s4{
+    width: 94.46px;
+    height: 100%;
+    padding: 10px;
+    display: block;
+}
+
+
+.card .s1 p,
+.card .s2 p,
+.card .s3 p,
+.card .s4 p{
+    
+    font-size: 20px;
+    background-color: #400863;
+    padding: 10px;
+    transform: scale(0);
     color: rgb(255, 255, 255);
-    font-size: 0;
-    background-color: #00000000;
     border-radius: 15px;
 }
 
+
+.card:hover .s1 p,
+.card:hover .s2 p,
+.card:hover .s3 p,
+.card:hover .s4 p{
+    transform: scale(1);
+    transition-duration: 0.3s;
+}
+
 .card:hover .s1 p{
-    transition-duration: 0.5s;
-    font-size: 20px;
     transition-delay: 8s;
-    background-color: #400863;
-    padding: 10px;
 }
 
 .card:hover .s2 p{
-    transition-duration: 0.5s;
-    font-size: 20px;
     transition-delay: 8.3s;
-    background-color: #400863;
-    padding: 10px;
 }
 
 .card:hover .s3 p{
-    transition-duration: 0.5s;
-    font-size: 20px;
     transition-delay: 8.6s;
-    background-color: #400863;
-    padding: 10px;
 }
 
 .card:hover .s4 p{
-    transition-duration: 0.5s;
-    font-size: 20px;
     transition-delay: 8.9s;
-    background-color: #400863;
-    padding: 10px;
 }
